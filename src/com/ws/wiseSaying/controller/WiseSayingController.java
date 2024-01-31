@@ -9,8 +9,8 @@ import com.ws.wiseSaying.entity.WiseSaying; // WiseSayingController클래스에�
 
 public class WiseSayingController { // WiseSayingController를 
 
-	private int lastId; // 클래스 안쪽에서 사용할 수 있도록 
-	private List<WiseSaying> wiseSayings;
+	private int lastId; // 클래스 안쪽에서 사용할 수 있도록 정수만을 담을 수 있는 변수를 선언
+	private List<WiseSaying> wiseSayings; 
 
 	public WiseSayingController() {
 		lastId = 0;
