@@ -20,7 +20,7 @@ public class App { // 프로그램 실행 시 메인 메서드 안에서 App클�
 		while (system_status == 1) { // system_status과 1과 같을 때 반복문이 실행된다
 			System.out.print("명령어 ) "); // 조건이 참일 때 가장 먼저 실행되는 출력문
 			String cmd = Container.getScanner().nextLine().trim(); // 콘솔에 입력하기 위해서 컨테이너 클래스 안에 있는 스캐너를 불러오고 한줄 사용과 공백 제거 기능을 cmd변수에 담았다
-			Rq rq = new Rq(cmd);
+			Rq rq = new Rq(cmd); //rq 객체를 만들고 cmd를 인자로 받는다 그 값을 rq 변수에 담는다
 
 			switch (rq.getActionCode()) { 
 			case "종료":
@@ -34,13 +34,13 @@ public class App { // 프로그램 실행 시 메인 메서드 안에서 App클�
 				wiseSayingController.list();
 				break;
 			case "삭제":
-				wiseSayingController.remove(rq);
+				wiseSayingController.remove(rq); //위에 선언 된 rq를 이용해서 rq를 넘겨주고 삭제를 하기 위한 기능
 				break;
 			case "수정":
 				wiseSayingController.modify(rq);
 				break;
-			default:
-				System.out.println("존재하지 않는 명령어입니다");
+			default: //일치하는 case가 없을 때 실행된다
+				System.out.println("존재하지 않는 명령어입니다"); // 
 				break;
 			}
 		}
