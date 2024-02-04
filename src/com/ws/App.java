@@ -7,7 +7,7 @@ public class App { // 프로그램 실행 시 메인 메서드 안에서 App클�
 	
 	private byte system_status = 1; //제어문에서 종료를 만났을 때 빠져나와서 다시 반복문으로 올라가지 않게 변수 선언을 해놓는다
 
-	public App() { 
+	public App() { //스캐너를 갖고 있었지만 컨테이너로 옮겨지면서 기능이 없어졌다
 
 	}
 
@@ -28,10 +28,10 @@ public class App { // 프로그램 실행 시 메인 메서드 안에서 App클�
 				system_status = 0; //앱 클래스에서 선언한 변수의 값과 반복문의 값이 같지 않기때문에 두번째 반복문은 실행되지 않고 바로 종료된다 
 				break; //종료가 실행되고 마지막에 제어문을 빠져나온다
 			case "등록": //등록이라고 적혀있는 경우
-				wiseSayingController.write(); //시스템컨트롤러의 write메서드를 실행한다
+				wiseSayingController.write(); //wiseSayingController의 write메서드를 실행한다
 				break; // 등록이 실행되고 마지막에 제어문을 빠져나온다
 			case "목록": //목록이라고 적혀있는 경우
-				wiseSayingController.list(); //시스템컨트롤러의 list메서드를 실행한다
+				wiseSayingController.list(); //wiseSayingController러의 list메서드를 실행한다
 				break; // 목록이 실행되고 마지막에 제어문을 빠져나온다
 			case "삭제": //삭제라고 적혀있는 경우
 				wiseSayingController.remove(rq); //위에 선언 된 rq를 이용해서 rq를 넘겨주고 삭제를 하기 위한 기능이 실행된다

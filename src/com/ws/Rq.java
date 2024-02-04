@@ -43,13 +43,13 @@ public class Rq { // Rq클래스는 명령어를 파싱하기 위해 만든 클�
 		return params.get(name); //받아온 문자열을 데이터를 리턴한다
 	}
 
-	public int getIntParam(String name, int defaultValue) { //
-		try {
-			return Integer.parseInt(getParam(name));
-		} catch (NumberFormatException e) {
+	public int getIntParam(String name, int defaultValue) { // 매개변수로 키 값 name 문자열과 WiseSayingController안에 remove가 실행된 값을 넘겨받는다
+		try { //예외처리를 위해 쓴다 예외가 발생했을 때 catch에서 잡힌다
+			return Integer.parseInt(getParam(name)); //getParam에서 받은 name 문자열을 정수로 변환한다
+		} catch (NumberFormatException e) { //try에서 리턴되지 않으면 catch로 넘어간다 예외가 생기면 여기서 잡힌다
 
 		}
-		return defaultValue;
+		return defaultValue; //리턴의 경우는 2가지인데 try에서 리턴되지 않았을 때 여기에서 defaultValue를 리턴한다
 	}
 
 }
